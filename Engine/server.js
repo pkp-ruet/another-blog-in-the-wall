@@ -2,8 +2,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const cors = require("cors");
+
 const app = express();
 app.use(bodyParser.json());
+app.use(cors({ origin: true }));
+
 mongoose.connect("mongodb://localhost:27017/another-blog-in-the-wall", {
   useNewUrlParser: true,
   useUnifiedTopology: true,

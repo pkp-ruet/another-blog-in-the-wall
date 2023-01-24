@@ -9,10 +9,13 @@ const PORT = process.env.PORT || 3030;
 app.use(bodyParser.json());
 app.use(cors({ origin: true }));
 
-mongoose.connect("mongodb://localhost:27017/another-blog-in-the-wall", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  "mongodb+srv://pkp:143012@clusterblog.u3ghxj1.mongodb.net/test",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 
 const blogSchema = new mongoose.Schema({
   title: String,
@@ -37,9 +40,9 @@ app.post("/post", (req, res) => {
       res.send(`Post saved: ${data}`);
     })
     .catch((err) => {
-      res.status(500).send("Error saving post");
+      res.send("Error saving post");
     });
-  res.send(`This is the blog ${blog}`);
+  //res.send(`This is the blog ${blog}`);
 });
 
 app.get("/blogs", (req, res) => {

@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 const app = express();
+const PORT = process.env.PORT || 3030;
 app.use(bodyParser.json());
 app.use(cors({ origin: true }));
 
@@ -52,7 +53,6 @@ app.get("/blogs", (req, res) => {
 });
 
 // Start the server on a specific port
-const port = 3000;
-app.listen(port, () => {
+app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${port}`);
 });

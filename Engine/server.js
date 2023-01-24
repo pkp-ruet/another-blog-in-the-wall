@@ -54,5 +54,5 @@ app.get("/blogs", (req, res) => {
 
 // Start the server on a specific port
 app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${port}`);
+  console.log(`Server running at http://localhost:${PORT}`);
 });

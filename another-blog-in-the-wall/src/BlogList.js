@@ -18,7 +18,11 @@ const BlogList = () => {
       {data.map((item) => (
         <div key={item.id}>
           <h2>{item.title}</h2>
-          <button onClick={() => navigate("/blog", { state: { item } })}>
+          <button
+            onClick={() =>
+              navigate("/another-blog-in-the-wall/blog", { state: { item } })
+            }
+          >
             View Post
           </button>
         </div>

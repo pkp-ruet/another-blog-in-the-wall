@@ -1,10 +1,17 @@
 import React from "react";
-import "./Header.css";
+
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <div className="header">
-      <h1 className="header-title">Another Blog in the Wall</h1>
+      <button
+        className="header-title transparent-btn"
+        onClick={() => navigate("/")}
+      >
+        Another Blog in the Wall
+      </button>
     </div>
   );
 };

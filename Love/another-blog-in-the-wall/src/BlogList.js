@@ -7,18 +7,22 @@ const BlogList = () => {
 
   useEffect(() => {
     // Make the request
-    fetch("http://localhost:3030/blogs")
+    fetch("http://localhost:3030/allBlogDatas")
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.log(error));
   }, []);
 
   return (
-    <div>
+    <div className="container">
       {data.map((item) => (
-        <div key={item.id}>
+        <div className="card" key={item.id}>
           <h2>{item.title}</h2>
-          <button onClick={() => navigate("/blog", { state: { item } })}>
+          <button
+            onClick={() =>
+              navigate(`/blog/${item._id}`, { state: { id: item._id } })
+            }
+          >
             View Post
           </button>
         </div>

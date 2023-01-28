@@ -1,0 +1,73 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 16px; /* add space between columns */
+  grid-row-gap: 16px; /* add space between rows */
+  padding-left: 100px;
+}
+
+.card {
+  width: 200px; /* set width and height to make the cards square */
+  height: 200px;
+  border: 1px solid #ccc; /* add border to cards */
+  border-radius: 10px; /* make the cards square shape */
+  padding: 20px;
+  position: relative;
+  background-color: rgb(128, 128, 128);
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.card p {
+  margin-bottom: 0;
+}
+
+.card button {
+  background-color: #0077c9;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+
+.card button:hover {
+  background-color: #005580;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+}
+
+.header-logo {
+  height: 40px;
+  margin-right: 20px;
+}
+
+.header-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.transparent-btn {
+  background-color: transparent;
+  border: none;
+  color: #aaa;
+}

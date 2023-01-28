@@ -7,7 +7,7 @@ const BlogList = () => {
 
   useEffect(() => {
     // Make the request
-    fetch("https://another-blog-qi6m.onrender.com/blogs")
+    fetch("http://localhost:3030/blogs")
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.log(error));

@@ -3,6 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const path = require("path");
 
 const app = express();
 const PORT = process.env.PORT || 3030;
@@ -23,10 +24,6 @@ const blogSchema = new mongoose.Schema({
   author: String,
 });
 const Blog = mongoose.model("Blog", blogSchema);
-
-app.get("/", (req, res) => {
-  res.send("Hello, World!");
-});
 
 app.post("/post", (req, res) => {
   const blog = new Blog({
@@ -54,8 +51,12 @@ app.get("/blogs", (req, res) => {
       res.status(500).send("Error getting blogs");
     });
 });
-
+app.use(express.static(path.join(__dirname, "build")));
 // Start the server on a specific port
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
 });

@@ -1,0 +1,7 @@
+{
+"title": "Beautiful Amsterdam",
+"description": "Enjoy the beauty and history of capital city of Netherland"
+"content": "<!DOCTYPE html><html><body><p style='text-align: left; margin-left: 200px; margin-right: 200px;'></p>
+<p style='text-align: left; margin-left: 200px; margin-right: 200px;'></p>",
+"author": "Pritom Paul"
+}

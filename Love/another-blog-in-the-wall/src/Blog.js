@@ -15,8 +15,8 @@ const Blog = () => {
   return (
     <div style={{ textAlign: "center", margin: "0 auto" }}>
       <h2 style={{ marginTop: "50px" }}>{item.title}</h2>
-      <p
-        style={{ margin: "20px auto" }}
+      <div
+        className="content"
         dangerouslySetInnerHTML={{ __html: item.content }}
       />
     </div>

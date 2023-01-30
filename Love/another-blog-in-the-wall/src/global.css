@@ -1,19 +1,49 @@
 .container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 16px; /* add space between columns */
-  grid-row-gap: 16px; /* add space between rows */
-  padding-left: 100px;
+  background-color: #ff7f50;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-grow: 1;
+  height: 100%;
+  min-height: 100vh;
 }
 
 .card {
-  width: 200px; /* set width and height to make the cards square */
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  height: 215px;
+  margin: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #000000;
+}
+
+.card-image {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 200px;
   height: 200px;
-  border: 1px solid #ccc; /* add border to cards */
-  border-radius: 10px; /* make the cards square shape */
-  padding: 20px;
-  position: relative;
-  background-color: rgb(128, 128, 128);
+}
+
+.card-text {
+  padding: 10px;
+  width: 300px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffe4e1;
+}
+
+.description {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #aaa;
 }
 
 .card h2 {
@@ -51,7 +81,8 @@
 .header {
   display: flex;
   align-items: center;
-  background-color: #282c34;
+  justify-content: center;
+  background-color: #000000;
   color: white;
   padding: 20px;
 }
@@ -64,10 +95,23 @@
 .header-title {
   font-size: 24px;
   font-weight: bold;
+  margin: 0 auto;
 }
 
 .transparent-btn {
   background-color: transparent;
   border: none;
-  color: #aaa;
+  color: #f5f5f5;
+}
+.content {
+  text-align: left;
+  margin-left: 40px;
+  margin-right: 40px;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+
+.resized-image {
+  width: 80px;
+  height: 80px;
 }

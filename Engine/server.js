@@ -28,6 +28,9 @@ const blogSchema = new mongoose.Schema({
 const blogDataSchema = new mongoose.Schema({
   _id: String,
   title: String,
+  imgUrl: String,
+  description: String,
+  publishedDate: String,
 });
 const Blog = mongoose.model("Blog", blogSchema);
 const BlogData = mongoose.model("BlogData", blogDataSchema);
@@ -37,6 +40,9 @@ app.post("/post", (req, res) => {
   const blogData = new BlogData({
     _id: id,
     title: req.body.title,
+    imgUrl: req.body.imgUrl,
+    description: req.body.description,
+    publishedDate: req.body.publishedDate,
   });
   const blog = new Blog({
     _id: id,
